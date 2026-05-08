@@ -1,29 +1,38 @@
 import React from "react";
 
+import { Factory, ShieldCheck, Ruler, Headset } from "lucide-react";
+
 import advance from "../assets/elements/icons/advance.png";
 import rigorous from "../assets/elements/icons/rigorous.png";
 import precision from "../assets/elements/icons/precision.png";
 
 const Hero3 = () =>
 {
+
     const standards = [
         {
-            icon: advance,
+            icon: Factory,
             title: "Advanced Manufacturing",
             description:
                 "State-of-the-art seamless pipe production engineered for strength, durability, and industrial reliability.",
         },
         {
-            icon: rigorous,
+            icon: ShieldCheck,
             title: "Rigorous Quality Control",
             description:
                 "Every pipe undergoes strict inspection and testing processes to ensure precision and global compliance standards.",
         },
         {
-            icon: precision,
+            icon: Ruler,
             title: "Precision Engineering",
             description:
                 "Manufactured with exceptional dimensional accuracy and superior tolerance for critical industrial applications.",
+        },
+        {
+            icon: Headset,
+            title: "Dedicated Support",
+            description:
+                "Our customer service team recognizes its commitment to your satisfaction and provides personalized support and expert advice.",
         },
     ];
 
@@ -43,41 +52,46 @@ const Hero3 = () =>
             </div>
 
             {/* Cards */}
-            <div className="mt-12 md:mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+            <div className="mt-12 md:mt-20 grid gap-8 md:grid-cols-2">
 
-                {standards.map((item, index) => (
-                    <div
-                        key={index}
-                        className="group  bg-white p-10 shadow-sm transition duration-500 hover:-translate-y-2 hover:shadow-xl"
-                    >
+                {standards.map((item, index) =>
+                {
 
-                        {/* Icon */}
-                        <div className="mb-8 flex justify-center">
-                            <div className="flex h-16 md:h-24 w-16 md:w-24 rotate-45 items-center justify-center  bg-[#1B2B39] transition duration-500 group-hover:scale-105">
+                    const Icon = item.icon;
 
-                                <img
-                                    src={item.icon}
-                                    alt={item.title}
-                                    className="h-8 md:h-10 w-8 md:w-10 -rotate-45 object-contain"
-                                />
+
+                    return (
+
+                        <div
+                            key={index}
+                            className="group  bg-white p-10 shadow-sm transition duration-500 hover:-translate-y-2 hover:shadow-xl"
+                        >
+
+                            {/* Icon */}
+                            <div className="mb-8 flex justify-center">
+                                <div className="flex h-16 md:h-24 w-16 md:w-24 rotate-45 items-center justify-center  bg-[#1B2B39] transition duration-500 group-hover:scale-105">
+
+                                    <Icon className="h-8 w-8 md:h-10 md:w-10 text-white -rotate-45" />
+
+                                </div>
+                            </div>
+
+                            {/* Content */}
+                            <div className="text-center space-y-4">
+
+                                <h3 className="text-lg md:text-2xl  text-[#1B2B39]">
+                                    {item.title}
+                                </h3>
+
+                                <p className="mt-5 text-xs md:text-lg leading-relaxed text-gray-500">
+                                    {item.description}
+                                </p>
 
                             </div>
                         </div>
+                    );
+                })}
 
-                        {/* Content */}
-                        <div className="text-center space-y-4">
-
-                            <h3 className="text-lg md:text-2xl  text-[#1B2B39]">
-                                {item.title}
-                            </h3>
-
-                            <p className="mt-5 text-xs md:text-lg leading-relaxed text-gray-500">
-                                {item.description}
-                            </p>
-
-                        </div>
-                    </div>
-                ))}
 
             </div>
         </section>

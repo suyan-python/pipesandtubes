@@ -1,55 +1,72 @@
 import React from "react";
-
-
 import { Globe } from 'lucide-react';
 
 
-import icon1 from "../assets/elements/icons2/icon.png";
-import icon2 from "../assets/elements/icons2/icon2.png";
+import
+{
+    ShieldCheck,
+    Flame,
+    CircleDashed,
+    Thermometer,
+    Sparkles,
+    ScanLine,
+    Cog,
+    Truck,
+} from "lucide-react";
 
 
 const Hero4 = () =>
 {
+
+
     const points = [
         {
-            icon: icon1,
+            icon: ShieldCheck,
             text: "1. Raw Material Selection",
-            description: "High-quality carbon steel and alloy steel billets are selected to ensure strength and durability.",
+            description:
+                "High-quality carbon steel and alloy steel billets are selected to ensure strength and durability.",
         },
         {
-            icon: icon2,
+            icon: Flame,
             text: "2. Heating & Piercing",
-            description: "Billets are heated to high temperatures and pierced to form hollow shells (mother tubes).",
+            description:
+                "Billets are heated to high temperatures and pierced to form hollow shells (mother tubes).",
         },
         {
-            icon: icon1,
+            icon: CircleDashed,
             text: "3. Tube Formation & Drawing",
-            description: "The hollow tubes are processed through single or multiple drawing stages to achieve required size, thickness, and precision.",
+            description:
+                "The hollow tubes are processed through single or multiple drawing stages to achieve required size, thickness, and precision.",
         },
         {
-            icon: icon2,
+            icon: Thermometer,
             text: "4. Heat Treatment",
-            description: "Tubes are annealed to enhance mechanical properties and ensure structural consistency.",
+            description:
+                "Tubes are annealed to enhance mechanical properties and ensure structural consistency.",
         },
         {
-            icon: icon1,
+            icon: Sparkles,
             text: "5. Surface Treatment",
-            description: "Pickling, phosphating, and lubrication are applied to improve finish and prepare for further processing.",
+            description:
+                "Pickling, phosphating, and lubrication are applied to improve finish and prepare for further processing.",
         },
         {
-            icon: icon2,
+            icon: ScanLine,
             text: "6. Finishing & Straightening",
-            description: "Tubes are straightened, cleaned, and cut to exact specifications.",
+            description:
+                "Tubes are straightened, cleaned, and cut to exact specifications.",
         },
         {
-            icon: icon1,
+            icon: Cog,
             text: "7. Advanced Processing Methods",
-            description: "Manufactured using techniques such as Plug Mill, Mandrel Mill, PQF, and Pilger Mill for superior quality and uniformity.",
+            description:
+                "Manufactured using techniques such as Plug Mill, Mandrel Mill, PQF, and Pilger Mill for superior quality and uniformity.",
         },
         {
-            icon: icon2,
+            icon: Truck,
             text: "8. Quality Testing & Dispatch",
-            description: "Each tube undergoes strict quality checks, marking, and protective coating before bundling and dispatch.",
+            description:
+                "Each tube undergoes strict quality checks, marking, and protective coating before bundling and dispatch.",
         },
     ];
 
@@ -76,31 +93,36 @@ const Hero4 = () =>
             {/* Bullet Grid */}
             <div className="mt-16 grid gap-6 md:grid-cols-2">
 
-                {points.map((point, index) => (
-                    <div
-                        key={index}
-                        className="group flex items-start gap-5  border border-gray-200 bg-white p-6 transition duration-300 hover:-translate-y-1  hover:shadow-lg"
-                    >
+                {points.map((point, index) =>
+                {
+                    const Icon = point.icon;
 
-                        {/* Icon */}
-                        <div className="flex h-14 w-14 min-w-[56px] items-center justify-center bg-gray-100  transition duration-300 ">
+                    return (
+                        <div
+                            key={index}
+                            className="group flex items-start gap-5  border border-gray-200 bg-white p-6 transition duration-300 hover:-translate-y-1  hover:shadow-lg"
+                        >
 
-                            <Globe />
+                            {/* Icon */}
+                            <div className="flex h-14 w-14 min-w-[56px] items-center justify-center bg-gray-100  transition duration-300 ">
+
+                                <Icon className="h-6 w-6 text-[#181C1E]" />
+
+                            </div>
+
+                            <div>
+                                {/* Text */}
+                                <p className="header text-sm md:text-base leading-relaxed text-[#181C1E]  ">
+                                    {point.text}
+                                </p>
+                                <p className="text-sm md:text-base leading-relaxed text-[#5F5E5E] font-light">
+                                    {point.description}
+                                </p>
+                            </div>
 
                         </div>
-
-                        <div>
-                            {/* Text */}
-                            <p className="header text-sm md:text-base leading-relaxed text-[#181C1E]  ">
-                                {point.text}
-                            </p>
-                            <p className="text-sm md:text-base leading-relaxed text-[#5F5E5E] font-light">
-                                {point.description}
-                            </p>
-                        </div>
-
-                    </div>
-                ))}
+                    );
+                })}
 
             </div>
         </section>

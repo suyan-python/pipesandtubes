@@ -32,7 +32,7 @@ const Contact = () =>
                             Request a Quote
                         </h3>
 
-                        <p className="mt-3 text-gray-600 text-xs md:text-base">
+                        <p className="mt-3 text-gray-400 text-xs md:text-[14px] italic">
                             Fill out the form below and our team will get back
                             to you shortly.
                         </p>
@@ -114,7 +114,7 @@ const Contact = () =>
                             Contact Information
                         </h3>
 
-                        <p className="mt-4 leading-relaxed text-gray-300 font-light text-xs md:text-base">
+                        <p className="mt-4 leading-relaxed text-gray-300 font-light text-xs md:text-base ">
                             Reach out to us for product specifications,
                             technical support, and industrial inquiries.
                         </p>

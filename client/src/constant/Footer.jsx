@@ -2,6 +2,7 @@ import React from "react";
 
 import icon1 from "../assets/elements/icons/footer1.png";
 import icon2 from "../assets/elements/icons/footer2.png";
+import { MessageSquare, Network, Phone } from "lucide-react";
 
 const Footer = () =>
 {
@@ -32,7 +33,7 @@ const Footer = () =>
                         Quick Links
                     </h3>
 
-                    <button className="w-fit text-left text-[#94A3B8] text-xs md:text-base transition duration-300 hover:text-[#F16500]">
+                    <button className="w-fit text-left text-[#94A3B8] text-xs md:text-base transition duration-300 hover:text-[#F16500] cursor-pointer">
                         Privacy Policy
                     </button>
 
@@ -45,23 +46,24 @@ const Footer = () =>
                         Connect With Us
                     </h3>
 
+
                     <div className="mt-5 flex items-center gap-4">
 
-                        <button className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 transition duration-300 hover:border-[#F16500] hover:bg-[#F16500]">
-                            <img
-                                src={icon1}
-                                alt="Social Icon"
-                                className="h-3 md:h-5 w-5 md:w-5 object-contain"
-                            />
-                        </button>
+                        {/* Call Icon */}
+                        <a href="#contact">
 
-                        <button className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 transition duration-300 hover:border-[#F16500] hover:bg-[#F16500]">
-                            <img
-                                src={icon2}
-                                alt="Social Icon"
-                                className="h-3 md:h-5 w-5 md:w-5 object-contain"
-                            />
-                        </button>
+                            <button className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 transition duration-300 hover:border-[#F16500] hover:bg-[#F16500] cursor-pointer">
+                                <Network className="h-5 w-5 text-white" />
+
+                            </button>
+                        </a>
+
+                        <a href="#contact">
+                            {/* Message Icon */}
+                            <button className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 transition duration-300 hover:border-[#F16500] hover:bg-[#F16500] cursor-pointer">
+                                <MessageSquare className="h-5 w-5 text-white" />
+                            </button>
+                        </a>
 
                     </div>
 

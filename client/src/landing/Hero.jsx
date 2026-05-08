@@ -50,7 +50,7 @@ const Hero = () =>
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3, duration: 1 }}
-                        className="header text-4xl md:text-7xl lg:text-8xl font-bold leading-[1.05] text-white"
+                        className="header text-3xl md:text-5xl  lg:text-7xl font-bold leading-[1.05] text-white"
                     >
                         Precision
                         <br />
@@ -66,7 +66,7 @@ const Hero = () =>
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 1 }}
-                        className="max-w-2xl text-xs md:text-lg leading-relaxed text-gray-300"
+                        className="max-w-2xl text-xs md:text-base lg:text-lg leading-relaxed text-gray-300"
                     >
                         High-quality, durable, and engineered for performance.
                         We provide mission-critical piping solutions for global
@@ -82,7 +82,7 @@ const Hero = () =>
                     >
                         <a href="#contact">
 
-                            <button className="group relative overflow-hidden border border-white md:px-8 px-5  py-3 uppercase tracking-widest text-[8px] md:text-sm text-white transition-all duration-500 hover:text-black cursor-pointer">
+                            <button className="group relative overflow-hidden border border-white md:px-8 px-5  py-3 uppercase tracking-widest text-[8px] md:text-[12px] lg:text-sm text-white transition-all duration-500 hover:text-black cursor-pointer">
                                 <span className="relative z-10">Contact Us</span>
 
                                 <span className="absolute inset-0 -translate-x-full bg-white transition-transform duration-500 group-hover:translate-x-0"></span>

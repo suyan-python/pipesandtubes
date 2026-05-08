@@ -39,7 +39,7 @@ const Hero2 = () =>
             </div>
 
 
-            <div className="relative max-w-7xl mx-auto overflow-hidden">
+            <div className="relative max-w-xl md:max-w-7xl mx-auto overflow-hidden">
 
                 {/* Product Segment Intro */}
                 <motion.div
@@ -47,7 +47,7 @@ const Hero2 = () =>
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="relative mt-16 md:mt-28"
+                    className="relative mt-8 md:mt-16"
                 >
 
                     <motion.h3
@@ -65,7 +65,7 @@ const Hero2 = () =>
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.3, duration: 0.8 }}
-                        className="mt-6 text-xs md:text-lg leading-relaxed text-gray-500 font-bold tracking-wide max-w-3xl"
+                        className="mt-6 text-xs md:text-lg leading-relaxed text-gray-500 font-bold tracking-wide "
                     >
                         At Arun Seamless Pipes & Tubes, we deliver high-strength
                         seamless tubes engineered for demanding industrial
