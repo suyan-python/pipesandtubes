@@ -80,11 +80,14 @@ const Hero = () =>
                         transition={{ delay: 0.7, duration: 0.8 }}
                         className="mt-6"
                     >
-                        <button className="group relative overflow-hidden border border-white md:px-8 px-5  py-3 uppercase tracking-widest text-[8px] md:text-sm text-white transition-all duration-500 hover:text-black">
-                            <span className="relative z-10">Contact Us</span>
+                        <a href="#contact">
 
-                            <span className="absolute inset-0 -translate-x-full bg-white transition-transform duration-500 group-hover:translate-x-0"></span>
-                        </button>
+                            <button className="group relative overflow-hidden border border-white md:px-8 px-5  py-3 uppercase tracking-widest text-[8px] md:text-sm text-white transition-all duration-500 hover:text-black cursor-pointer">
+                                <span className="relative z-10">Contact Us</span>
+
+                                <span className="absolute inset-0 -translate-x-full bg-white transition-transform duration-500 group-hover:translate-x-0"></span>
+                            </button>
+                        </a>
 
                     </motion.div>
                 </motion.div>

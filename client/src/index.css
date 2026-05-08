@@ -16,3 +16,7 @@ p {
   font-optical-sizing: auto;
   font-style: normal;
 }
+
+html {
+  scroll-behavior: smooth;
+}

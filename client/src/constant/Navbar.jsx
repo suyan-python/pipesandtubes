@@ -12,9 +12,11 @@ const Navbar = () =>
                 </h1>
 
                 {/* CTA Button */}
-                <button className="bg-[#F16500] px-2 md:px-6 py-2 text-[10px] md:text-base font-medium text-white transition duration-300 hover:opacity-90 uppercase cursor-pointer">
-                    Get a Quote
-                </button>
+                <a href="#contact">
+                    <button className="bg-[#F16500] px-2 md:px-6 py-2 text-[10px] md:text-base font-medium text-white transition duration-300 hover:opacity-90 uppercase cursor-pointer">
+                        Get a Quote
+                    </button>
+                </a>
 
             </nav>
         </header>

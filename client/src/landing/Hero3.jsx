@@ -28,7 +28,7 @@ const Hero3 = () =>
     ];
 
     return (
-        <section className="w-full bg-[#E0E3E5] px-6 py-24 md:px-16 lg:px-24">
+        <section className="w-full bg-[#E0E3E5] px-6 py-12 md:py-24 md:px-16 lg:px-24">
 
             {/* Heading */}
             <div className="mx-auto max-w-4xl text-center">
@@ -43,7 +43,7 @@ const Hero3 = () =>
             </div>
 
             {/* Cards */}
-            <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+            <div className="mt-12 md:mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
                 {standards.map((item, index) => (
                     <div
@@ -53,12 +53,12 @@ const Hero3 = () =>
 
                         {/* Icon */}
                         <div className="mb-8 flex justify-center">
-                            <div className="flex h-24 w-24 rotate-45 items-center justify-center  bg-[#1B2B39] transition duration-500 group-hover:scale-105">
+                            <div className="flex h-16 md:h-24 w-16 md:w-24 rotate-45 items-center justify-center  bg-[#1B2B39] transition duration-500 group-hover:scale-105">
 
                                 <img
                                     src={item.icon}
                                     alt={item.title}
-                                    className="h-10 w-10 -rotate-45 object-contain"
+                                    className="h-8 md:h-10 w-8 md:w-10 -rotate-45 object-contain"
                                 />
 
                             </div>
@@ -67,11 +67,11 @@ const Hero3 = () =>
                         {/* Content */}
                         <div className="text-center space-y-4">
 
-                            <h3 className="text-2xl  text-[#1B2B39]">
+                            <h3 className="text-lg md:text-2xl  text-[#1B2B39]">
                                 {item.title}
                             </h3>
 
-                            <p className="mt-5 text-lg leading-relaxed text-gray-500">
+                            <p className="mt-5 text-xs md:text-lg leading-relaxed text-gray-500">
                                 {item.description}
                             </p>
 
