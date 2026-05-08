@@ -23,33 +23,33 @@ const Hero4 = () =>
         },
         {
             icon: icon1,
-            text: "Precision manufacturing with strict dimensional tolerance standards",
-            description: "High-quality carbon steel and alloy steel billets are selected to ensure strength and durability.",
+            text: "3. Tube Formation & Drawing",
+            description: "The hollow tubes are processed through single or multiple drawing stages to achieve required size, thickness, and precision.",
         },
         {
             icon: icon2,
-            text: "Reliable solutions for Oil & Gas, Boilers, and Heat Exchangers",
-            description: "High-quality carbon steel and alloy steel billets are selected to ensure strength and durability.",
+            text: "4. Heat Treatment",
+            description: "Tubes are annealed to enhance mechanical properties and ensure structural consistency.",
         },
         {
             icon: icon1,
-            text: "Advanced seamless production process without welded joints",
-            description: "High-quality carbon steel and alloy steel billets are selected to ensure strength and durability.",
+            text: "5. Surface Treatment",
+            description: "Pickling, phosphating, and lubrication are applied to improve finish and prepare for further processing.",
         },
         {
             icon: icon2,
-            text: "Consistent quality assurance through rigorous testing procedures",
-            description: "High-quality carbon steel and alloy steel billets are selected to ensure strength and durability.",
+            text: "6. Finishing & Straightening",
+            description: "Tubes are straightened, cleaned, and cut to exact specifications.",
         },
         {
             icon: icon1,
-            text: "Custom-engineered tube solutions for demanding environments",
-            description: "High-quality carbon steel and alloy steel billets are selected to ensure strength and durability.",
+            text: "7. Advanced Processing Methods",
+            description: "Manufactured using techniques such as Plug Mill, Mandrel Mill, PQF, and Pilger Mill for superior quality and uniformity.",
         },
         {
             icon: icon2,
-            text: "Trusted performance across infrastructure and heavy industries",
-            description: "High-quality carbon steel and alloy steel billets are selected to ensure strength and durability.",
+            text: "8. Quality Testing & Dispatch",
+            description: "Each tube undergoes strict quality checks, marking, and protective coating before bundling and dispatch.",
         },
     ];
 
