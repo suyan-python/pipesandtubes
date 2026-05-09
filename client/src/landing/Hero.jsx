@@ -26,13 +26,6 @@ const Hero = () =>
                 className="absolute -left-40 top-20 h-[400px] w-[400px] rounded-full bg-orange-500/20 blur-3xl"
             />
 
-            {/* Industrial lines */}
-            <div className="absolute inset-0 opacity-10">
-                <div className="absolute left-10 top-0 h-full w-px bg-white"></div>
-                <div className="absolute left-24 top-0 h-full w-px bg-white"></div>
-                <div className="absolute right-20 top-0 h-full w-px bg-white"></div>
-            </div>
-
             {/* Main Content */}
             <div className="relative z-10 w-full px-6 md:px-16 lg:px-24">
                 <motion.div
