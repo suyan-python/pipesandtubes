@@ -1,7 +1,55 @@
 import React from "react";
+import { useState } from "react";
+
 
 const Contact = () =>
 {
+    const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
+    const [status, setStatus] = useState(null); // 'sending' | 'success' | 'error'
+
+    const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+
+    const backend = import.meta.env.VITE_BACKEND_SERVER;
+    const handleSubmit = async (e) =>
+    {
+        e.preventDefault();
+
+        setStatus("sending");
+
+        try
+        {
+            const res = await fetch(`${backend}/api/contact`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(form),
+            });
+
+            const data = await res.json();
+
+            if (!res.ok)
+            {
+                throw new Error(data.error || "Something went wrong");
+            }
+
+            setStatus("success");
+
+            setForm({
+                name: "",
+                email: "",
+                phone: "",
+                message: "",
+            });
+        }
+        catch (err)
+        {
+            console.log(err);
+
+            setStatus("error");
+        }
+    };
+
     return (
         <section className="w-full bg-[#F1F4F6] px-6 py-12 md:py-24 md:px-16 lg:px-24" id="contact">
 
@@ -37,7 +85,7 @@ const Contact = () =>
                             to you shortly.
                         </p>
 
-                        <form className="mt-10 space-y-6 text-xs md:text-base">
+                        <form onSubmit={handleSubmit} className="mt-10 space-y-6 text-xs md:text-base">
 
                             <div className="flex justify-between gap-3 md:gap-12 ">
 
@@ -52,6 +100,7 @@ const Contact = () =>
                                         type="text"
                                         placeholder="Full name"
                                         className="w-full  border border-gray-300 px-5 py-4 outline-none transition duration-300 focus:border-[#F16500]"
+                                        name="name" value={form.name} onChange={handleChange}
                                     />
                                 </div>
 
@@ -65,6 +114,7 @@ const Contact = () =>
                                         type="email"
                                         placeholder="email@company.com"
                                         className="w-full  border border-gray-300 px-5 py-4 outline-none transition duration-300 focus:border-[#F16500]"
+                                        name="email" value={form.email} onChange={handleChange}
                                     />
                                 </div>
                             </div>
@@ -77,8 +127,9 @@ const Contact = () =>
 
                                 <input
                                     type="text"
-                                    placeholder="+1 (000) 000-0000"
+                                    placeholder="+91 (000) 000-0000"
                                     className="w-full  border border-gray-300 px-5 py-4 outline-none transition duration-300 focus:border-[#F16500]"
+                                    name="phone" value={form.phone} onChange={handleChange}
                                 />
                             </div>
 
@@ -92,16 +143,45 @@ const Contact = () =>
                                     rows="5"
                                     placeholder="Describe your project requirements..."
                                     className="w-full  border border-gray-300 px-5 py-4 outline-none transition duration-300 focus:border-[#F16500]"
+                                    name="message" value={form.message} onChange={handleChange}
                                 ></textarea>
                             </div>
 
                             {/* Button */}
                             <button
                                 type="submit"
-                                className="w-full  bg-[#F16500] px-6 py-4 text-xs md:text-sm font-light uppercase tracking-[0.2em] text-white transition duration-300 hover:opacity-90 cursor-pointer"
+                                disabled={status === "sending"}
+                                className={`w-full flex items-center justify-center gap-2 px-6 py-4 text-xs md:text-sm uppercase tracking-[0.2em] text-white transition duration-300 cursor-pointer
+        ${status === "sending"
+                                        ? "bg-[#F16500]/70 cursor-not-allowed"
+                                        : "bg-[#F16500] hover:opacity-90"
+                                    }`}
                             >
-                                Send Message
+                                {status === "sending" && (
+                                    <span className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent"></span>
+                                )}
+
+                                {status === "sending" ? "Sending..." : "Send Message"}
                             </button>
+
+                            {/* Status Messages */}
+                            <div className="mt-4 min-h-[24px] font-light">
+
+                                {status === "success" && (
+                                    <div className="flex items-center gap-2 text-green-600 text-xs md:text-sm animate-fade-in">
+                                        <span className="h-2 w-2 rounded-full bg-green-500"></span>
+                                        Message sent successfully. Our team will contact you soon.
+                                    </div>
+                                )}
+
+                                {status === "error" && (
+                                    <div className="flex items-center gap-2 text-red-500 text-xs md:text-sm animate-fade-in">
+                                        <span className="h-2 w-2 rounded-full bg-red-500"></span>
+                                        Something went wrong. Please try again.
+                                    </div>
+                                )}
+
+                            </div>
 
                         </form>
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import bg from "../assets/elements/background.png";
+import bg from "../assets/elements/background2.jpg";
 
 const Hero = () =>
 {
