@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import pipeImg from "../assets/elements/pipe1.webp";
+import pipeImg2 from "../assets/elements/pipe2.jpg";
 
 const Hero2 = () =>
 {
@@ -154,7 +155,7 @@ const Hero2 = () =>
                             <motion.img
                                 whileHover={{ scale: 1.08 }}
                                 transition={{ duration: 0.7 }}
-                                src={pipeImg}
+                                src={pipeImg2}
                                 alt="Industrial Pipe"
                                 className="h-full w-full object-cover"
                             />
