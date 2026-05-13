@@ -112,7 +112,7 @@ const Footer = () =>
                             {/* Intro */}
                             <section>
                                 <p className="text-gray-600">
-                                    Welcome to <span className="font-semibold text-[#1B2B39]">Arun Seamless</span>.
+                                    Welcome to <span className="font-semibold text-[#1B2B39]">Arun Seamless Pipe and Tubes Manufacturing</span>.
                                     We value your privacy and are committed to protecting any personal information you share with us through our website.
                                 </p>
 
